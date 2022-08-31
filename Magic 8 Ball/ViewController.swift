@@ -9,10 +9,12 @@
 import UIKit
 
 class ViewController: UIViewController {
+    @IBOutlet weak var imageViewBall: UIImageView!
     
-    let ballArray = [#imageLiteral(resourceName: "ball1.png"),#imageLiteral(resourceName: "ball2.png"),#imageLiteral(resourceName: "ball3.png"),#imageLiteral(resourceName: "ball4.png"),#imageLiteral(resourceName: "ball5.png")]
-
-
-
+    @IBAction func askMeButton(_ sender: UIButton) {
+        imageViewBall.image = UIImage (named: "ball\(Int.random(in: 1...5))")
+        print ("Button Pressed!")
+    }
+    
 }
 
